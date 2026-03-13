@@ -44,3 +44,4 @@ class Voiture:
     e1.affecterVoiture(v1)
     e2.affecterVoiture(v2)
     e1.retirerVoiture()
+    e3.affecterVoiture(v2)
