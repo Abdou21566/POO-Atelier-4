@@ -34,3 +34,10 @@ class Voiture:
     v1 = Voiture("AA123BB", 2025, "Mazda", 11000)
     v2 = Voiture("CC456DD", 2025, "Honda", 8000)
     v3 = Voiture("EE789FF", 2024, "Kia", 15000)
+    print(e1.afficherInformations())
+    print(e2.afficherInformations())
+    print(e3.afficherInformations())
+
+    print(v1.afficherInformations())
+    print(v2.afficherInformations())
+    print(v3.afficherInformations())
