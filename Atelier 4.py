@@ -41,3 +41,5 @@ class Voiture:
     print(v1.afficherInformations())
     print(v2.afficherInformations())
     print(v3.afficherInformations())
+    e1.affecterVoiture(v1)
+    e2.affecterVoiture(v2)
