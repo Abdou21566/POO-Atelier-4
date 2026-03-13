@@ -1,3 +1,4 @@
+# Classes d'abord
 class Employe:
     def __init__(self, numeroPermis, nom, prenom):
         self.numeroPermis = numeroPermis
@@ -6,7 +7,8 @@ class Employe:
         self.voitureService = None
 
     def afficherInformations(self):
-        return (self.numeroPermis, self.nom, self.prenom, self.voitureService)
+        return (self.numeroPermis, self.nom, self.prenom,
+                self.voitureService.matricule if self.voitureService else None)
 
     def affecterVoiture(self, voiture):
         if self.voitureService is None and voiture.chauffeur is None:
@@ -17,6 +19,7 @@ class Employe:
         if self.voitureService is not None:
             self.voitureService.chauffeur = None
             self.voitureService = None
+
 class Voiture:
     def __init__(self, matricule, annee, marque, kilometrage):
         self.matricule = matricule
@@ -26,22 +29,14 @@ class Voiture:
         self.chauffeur = None
 
     def afficherInformations(self):
-        return (self.matricule, self.annee, self.marque, self.kilometrage, self.chauffeur)
+        return (self.matricule, self.annee, self.marque, self.kilometrage,
+                self.chauffeur.nom if self.chauffeur else None)
 
-    e1 = Employe("I270520", "Idir", "Nassim")
-    e2 = Employe("B120399", "Bousekin", "Noureddine")
-    e3 = Employe("K150800", "Ali", "Samir")
-    v1 = Voiture("AA123BB", 2025, "Mazda", 11000)
-    v2 = Voiture("CC456DD", 2025, "Honda", 8000)
-    v3 = Voiture("EE789FF", 2024, "Kia", 15000)
-    print(e1.afficherInformations())
-    print(e2.afficherInformations())
-    print(e3.afficherInformations())
+# Création des objets après la définition des classes
+e1 = Employe("I270520", "Idir", "Nassim")
+e2 = Employe("B120399", "Bousekin", "Noureddine")
+e3 = Employe("K150800", "Ali", "Samir")
 
-    print(v1.afficherInformations())
-    print(v2.afficherInformations())
-    print(v3.afficherInformations())
-    e1.affecterVoiture(v1)
-    e2.affecterVoiture(v2)
-    e1.retirerVoiture()
-    e3.affecterVoiture(v2)
+v1 = Voiture("AA123BB", 2025, "Mazda", 11000)
+v2 = Voiture("CC456DD", 2025, "Honda", 8000)
+v3 = Voiture("EE789FF", 2024, "Kia", 15000)
