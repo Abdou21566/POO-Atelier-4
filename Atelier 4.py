@@ -31,3 +31,6 @@ class Voiture:
     e1 = Employe("I270520", "Idir", "Nassim")
     e2 = Employe("B120399", "Bousekin", "Noureddine")
     e3 = Employe("K150800", "Ali", "Samir")
+    v1 = Voiture("AA123BB", 2025, "Mazda", 11000)
+    v2 = Voiture("CC456DD", 2025, "Honda", 8000)
+    v3 = Voiture("EE789FF", 2024, "Kia", 15000)
